@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Meallayout({ meals }) {
+export default function Meallayout({ meals, onCheckout }) {
   const [selectedMeal, setSelectedMeal] = useState(null);
   const [selectedDrinks, setSelectedDrinks] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);
@@ -86,7 +86,7 @@ export default function Meallayout({ meals }) {
                 ))}
               </ul>
             </div>
-          </div>x
+          </div>
         </div>
       ))}
       <div className="container mx-auto border-2 border-black my-4 p-4">
@@ -100,7 +100,10 @@ export default function Meallayout({ meals }) {
         <p>
           Total price: ${totalPrice.toFixed(2)}
         </p>
-        <button className="bg-blue-700 text-white px-4 py-2 rounded-md">
+        <button
+          className="bg-blue-700 text-white px-4 py-2 rounded-md"
+          onClick={() => onCheckout(selectedMeal, totalPrice)}
+        >
           Checkout
         </button>
       </div>

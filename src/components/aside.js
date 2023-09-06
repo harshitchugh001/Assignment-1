@@ -1,11 +1,15 @@
 import React from 'react'
 
-export default function aside() {
+export default function Aside({ checkoutData }) {
     return (
-        <div>
-            
-                Aside content
-            
-        </div>
-    )
-}
+      <div>
+        {checkoutData && (
+          <div>
+            <p>Selected Meal: {checkoutData.meal.title}</p>
+            <p>Total Price: {checkoutData.price}</p>
+          </div>
+        )}
+      </div>
+    );
+  }
+  

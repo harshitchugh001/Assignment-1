@@ -5,7 +5,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import Home from './components/home'
+import Content from './components/content';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <div className="App">
 
           <Routes>
-            <Route key="Home" path='/' exact element={<Home></Home>} />
+            <Route key="Home" path='/' exact element={<Content></Content>} />
             <Route></Route>
           </Routes>
         </div>
