@@ -1,4 +1,5 @@
 import React from 'react'
+import Passenger from './passenger';
 
 export default function Aside({ checkoutData }) {
     return (
@@ -6,9 +7,12 @@ export default function Aside({ checkoutData }) {
         {checkoutData && (
           <div>
             <p>Selected Meal: {checkoutData.meal.title}</p>
-            <p>Total Price: {checkoutData.price}</p>
+            <p>Total Price: {checkoutData.price.toFixed(2)}</p>
           </div>
         )}
+        <Passenger></Passenger>
+
+        
       </div>
     );
   }

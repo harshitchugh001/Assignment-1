@@ -6,6 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Content from './components/content';
+import Home from './components/home';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <div className="App">
 
           <Routes>
-            <Route key="Home" path='/' exact element={<Content></Content>} />
+          <Route key="Home" path='/' exact element={<Home></Home>} />
+            <Route path='/content' exact element={<Content></Content>}></Route>
             <Route></Route>
           </Routes>
         </div>
