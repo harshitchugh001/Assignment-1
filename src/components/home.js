@@ -22,7 +22,7 @@ export default function Home() {
 
   const handleContacts = () => {
     if (isAuthenticated) {
-      navigate('/userpost'); 
+      navigate('/content'); 
     } else {
       openRegisterModal(); 
     }
