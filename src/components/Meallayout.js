@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Meallayout({ meals, onCheckout }) {
+export default function Meallayout({ meals, selectedpassengerId }) {
   const [selectedMeal, setSelectedMeal] = useState(null);
   const [selectedDrinks, setSelectedDrinks] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);
@@ -43,6 +43,36 @@ export default function Meallayout({ meals, onCheckout }) {
     setTotalPrice(totalPrice);
   };
 
+  const handleCheckout = () => {
+    if (!selectedMeal) {
+      alert('Please select a meal before checking out.');
+      return;
+    }
+  
+    const checkoutData = {
+      passengerId: selectedpassengerId.passengerId, 
+      meal: selectedMeal.title, 
+      drink: selectedDrinks[selectedMeal.id].map((drink) => drink.title)[0], 
+      totalPrice: totalPrice,
+    };
+    console.log(checkoutData);
+  
+    fetch(`${process.env.REACT_APP_API}/updatefood`, {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(checkoutData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Checkout response:', data);
+      })
+      .catch((error) => {
+        console.error('Error during checkout:', error);
+      });
+  };
+  
   return (
     <div>
       {meals.map((meal, index) => (
@@ -102,7 +132,7 @@ export default function Meallayout({ meals, onCheckout }) {
         </p>
         <button
           className="bg-blue-700 text-white px-4 py-2 rounded-md"
-          onClick={() => onCheckout(selectedMeal, totalPrice)}
+          onClick={handleCheckout}
         >
           Checkout
         </button>

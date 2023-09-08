@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from './Button';
 import Meallayout from './Meallayout';
-import Aside from './aside';
+import Passenger from './passenger';
 export default function Content() {
   const mealsData = {
     meals: [
@@ -207,6 +207,7 @@ export default function Content() {
   };
   const [selectedLabel, setSelectedLabel] = useState(null);
   const [checkoutData, setCheckoutData] = useState(null);
+  const [passengerId, setpassengerId] = useState(null);
 
   const handleSelect = (labelId) => {
     setSelectedLabel(labelId);
@@ -218,6 +219,9 @@ export default function Content() {
   const handleCheckout = (meal, price) => {
     setCheckoutData({ meal, price });
   };
+  const handlePassengerId = (passengerId) => {
+    setpassengerId({passengerId});
+  };
  
 
 
@@ -225,16 +229,16 @@ export default function Content() {
 
     <div className='grid grid-cols-12 gap-4 md:gap-20 w-full h-full bg-gray-100'>
       <div className="col-span-12 md:col-span-8 bg-blue-300 border-gray-200 h-[calc(100vh-3.75rem)] p-4 md:mt-4 md:ml-4">
-        <div className="col-span-12 bg-green-400 px-3">
+        <div className="col-span-12 bg-white-400 px-3">
           <Button onSelect={handleSelect} selectedButton={selectedLabel} />
         </div>
         <div className="mt-4 ml-4">
           <p>Selected Label: {selectedLabel}</p>
-          <Meallayout meals={filteredMeals} onCheckout={handleCheckout} />
+          <Meallayout meals={filteredMeals} onCheckout={handleCheckout} selectedpassengerId={passengerId} />
         </div>
       </div>
       <aside className='col-span-12 md:col-span-4 bg-orange-300 p-4 md:mt-4 md:mr-7'>
-      <Aside checkoutData={checkoutData} />
+        <Passenger checkoutData={checkoutData} onPassengerId={handlePassengerId} ></Passenger>
 
       </aside>
 
