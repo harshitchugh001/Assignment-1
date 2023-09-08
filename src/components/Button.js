@@ -38,12 +38,12 @@ export default function Button({ onSelect, selectedButton }) {
   
     return (
       <div className="mt-2 flex flex-wrap justify-center">
-        <div className="p-2">
+        <div className="p-2 border-black-200" >
           {labels.map((label) => (
             <button
               key={label.id}
-              className={`rounded-3xl bg-blue-500 text-white m-1 p-2 ${
-                selectedButton === label.id ? 'bg-green-500' : ''
+              className={`rounded-3xl bg-white-500 text-black focus:ring-4 focus:outline-none focus:ring-black m-1 p-2 ${
+                selectedButton === label.id ? 'bg-gray-200' : ''
               }`}
               onClick={() => handleButtonClick(label)}
             >

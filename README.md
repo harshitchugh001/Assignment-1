@@ -37,5 +37,4 @@ DeploymentLink:-https://fantastic-liger-bad67c.netlify.app/
    - There is an option to view the total payment collected.
    - The user clicks on a "Total Payment Collected" button or link to see the total amount paid for the selected items.
 
-file:///home/harshit/Pictures/Screenshots/Screenshot%20from%202023-09-08%2010-59-07.png
-file:///home/harshit/Pictures/Screenshots/Screenshot%20from%202023-09-08%2010-59-21.png
+

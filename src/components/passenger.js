@@ -92,7 +92,7 @@ export default function Passenger({ checkoutData, onPassengerId }) {
         <h2>Total Passenger: {passengerData.length}</h2>
         <Logout />
       </div>
-      <div className="container mx-auto border-2 border-black my-4 p-4">
+      <div className="container mx-auto border-2 border-blue-800 bg-white  my-4 p-4">
         <h3>Passengers</h3>
         {passengerData.map((passenger, index) => (
           <div key={index} className="border rounded-lg mb-2">
@@ -134,8 +134,8 @@ export default function Passenger({ checkoutData, onPassengerId }) {
           </div>
         ))}
       </div>
-      <div className="container mx-auto border-2 border-black my-4 p-4">
-        <div className="container border-2 border-black p-2">
+      <div className="container mx-auto border-2 border-blue-800  bg-white my-4 p-4">
+        <div className="container border-2 border-blue-800 p-2">
           <p>Total price: ${totalPayment.toFixed(2)}</p>
           <button className="bg-blue-700 text-white px-4 py-2 rounded-md" onClick={handleTotalPayment}>
             Total payment collected

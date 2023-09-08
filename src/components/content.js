@@ -220,30 +220,28 @@ export default function Content() {
     setCheckoutData({ meal, price });
   };
   const handlePassengerId = (passengerId) => {
-    setpassengerId({passengerId});
+    setpassengerId({ passengerId });
   };
- 
+
 
 
   return (
 
-    <div className='grid grid-cols-12 gap-4 md:gap-20 w-full h-full bg-gray-100'>
-      <div className="col-span-12 md:col-span-8 bg-blue-300 border-gray-200 h-[calc(100vh-3.75rem)] p-4 md:mt-4 md:ml-4">
+    <div className='grid grid-cols-12 gap-4 bg-gray-300 md:gap-20 w-full h-full bg-gray-100'>
+      <div class="col-span-12 md:col-span-8 bg-white border border-black p-4 md:mt-4 md:ml-4">
         <div className="col-span-12 bg-white-400 px-3">
           <Button onSelect={handleSelect} selectedButton={selectedLabel} />
+          <hr class="border-t-2 border-gray-800"></hr>
         </div>
         <div className="mt-4 ml-4">
           <p>Selected Label: {selectedLabel}</p>
           <Meallayout meals={filteredMeals} onCheckout={handleCheckout} selectedpassengerId={passengerId} />
         </div>
       </div>
-      <aside className='col-span-12 md:col-span-4 bg-orange-300 p-4 md:mt-4 md:mr-7'>
-        <Passenger checkoutData={checkoutData} onPassengerId={handlePassengerId} ></Passenger>
-
+      <aside className='col-span-12 md:col-span-4  p-4 md:mt-4 md:mr-7'>
+        <Passenger checkoutData={checkoutData} onPassengerId={handlePassengerId} />
       </aside>
-
       <div>
-
       </div>
     </div>
   );

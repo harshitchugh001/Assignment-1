@@ -117,6 +117,7 @@ export default function Meallayout({ meals, selectedpassengerId }) {
               </ul>
             </div>
           </div>
+          <hr className='my-4'></hr>
         </div>
       ))}
       <div className="container mx-auto border-2 border-black my-4 p-4">
