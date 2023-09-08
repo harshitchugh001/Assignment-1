@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+backend code:-https://github.com/harshitchugh001/Assignment1-backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DeploymentLink:-https://fantastic-liger-bad67c.netlify.app/
 
-## Available Scripts
 
-In the project directory, you can run:
+1. **Sign Up:**
+   - User clicks on a "Join" or "Sign Up" button.
+   - A dialog box appears, prompting the user to enter their email, name, and password.
+   - User fills in the required information and submits the form to create an account.
 
-### `npm start`
+2. **Log In:**
+   - After signing up, the user logs in with the email and password they provided during signup.
+   
+3. **Add Passenger:**
+   - Upon logging in, there is an option to add a passenger.
+   - User clicks on an "Add Passenger" button.
+   - A form appears, prompting the user to enter passenger details such as name, destination, and seat.
+   - User fills in the passenger information and submits the form.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. **Select Food:**
+   - After adding the passenger, there is an option to select food.
+   - User clicks on a "Select Food" button.
+   - The color of the button changes to indicate selection.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. **Select Meal and Drink:**
+   - User first selects a meal option.
+   - After selecting a meal, the user proceeds to select a drink option.
 
-### `npm test`
+6. **Checkout:**
+   - Once the meal and drink are selected, the user clicks on a "Checkout" button to proceed with payment.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. **View Updated Selection:**
+   - After completing the checkout process, the user refreshes the page.
+   - The selected food options are updated and displayed on the page.
 
-### `npm run build`
+8. **Total Payment Collected:**
+   - There is an option to view the total payment collected.
+   - The user clicks on a "Total Payment Collected" button or link to see the total amount paid for the selected items.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+file:///home/harshit/Pictures/Screenshots/Screenshot%20from%202023-09-08%2010-59-07.png
+file:///home/harshit/Pictures/Screenshots/Screenshot%20from%202023-09-08%2010-59-21.png
