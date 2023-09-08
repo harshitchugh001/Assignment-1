@@ -2,6 +2,9 @@ backend code:-https://github.com/harshitchugh001/Assignment1-backend
 
 DeploymentLink:-https://fantastic-liger-bad67c.netlify.app/
 
+![Screenshot from 2023-09-08 10-59-07](https://github.com/harshitchugh001/Assignment-1/assets/123458021/bfce646b-6dc1-41bf-b4f4-abe98f1cfbba)
+
+![Screenshot from 2023-09-08 10-59-07](https://github.com/harshitchugh001/Assignment-1/assets/123458021/74fc48bb-7859-445b-ab2c-ba7863a2d593)
 
 1. **Sign Up:**
    - User clicks on a "Join" or "Sign Up" button.
