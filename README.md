@@ -1,6 +1,7 @@
 backend code:-https://github.com/harshitchugh001/Assignment1-backend
 
 DeploymentLink:-https://fantastic-liger-bad67c.netlify.app/
+Deploymenmt link2:-https://dynamic-sprinkles-ca16c1.netlify.app/
 
 ![Screenshot from 2023-09-08 10-59-07](https://github.com/harshitchugh001/Assignment-1/assets/123458021/bfce646b-6dc1-41bf-b4f4-abe98f1cfbba)
 
