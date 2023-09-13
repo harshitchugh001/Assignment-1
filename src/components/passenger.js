@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AddPassenger from './Addpassenger';
 import Logout from './logoutButton';
 
-export default function Passenger({ checkoutData, onPassengerId }) {
+export default function Passenger({ passengerfood, onPassengerId }) {
   const [isAddPassengerOpen, setAddPassengerOpen] = useState(false);
   const [passengerData, setPassengerData] = useState([]);
   const [totalPayment, setTotalPayment] = useState(0);
@@ -43,7 +43,7 @@ export default function Passenger({ checkoutData, onPassengerId }) {
 
   useEffect(() => {
     fetchPassengersAndFoods();
-  }, []);
+  }, [passengerfood]);
 
   const toggleAccordion = (index) => {
     const updatedPassengers = [...passengerData];
@@ -83,12 +83,7 @@ export default function Passenger({ checkoutData, onPassengerId }) {
   return (
     <>
       <div className="flex justify-between items-center">
-        {checkoutData && (
-          <div>
-            <p>Selected Meal: {checkoutData.meal.title}</p>
-            <p>Total Price: {checkoutData.price.toFixed(2)}</p>
-          </div>
-        )}
+        
         <h2>Total Passenger: {passengerData.length}</h2>
         <Logout />
       </div>
@@ -111,7 +106,7 @@ export default function Passenger({ checkoutData, onPassengerId }) {
               <div className="flex items-center">
               <p className="mr-4">Price: ${passenger.food && passenger.food.totalPrice ? passenger.food.totalPrice.toFixed(2) : '0.00'}</p>
                 <button
-                  className={`bg-${passenger.selected ? 'green' : 'blue'}-500 hover:bg-${passenger.selected ? 'green' : 'blue'}-600 text-white font-bold px-4 rounded`}
+                  className={`bg-${passenger.selected ? 'green-500' : 'blue-500'}  text-${passenger.selected ?'black':'white'} font-bold px-4 rounded`}
                   onClick={() => handleSelectFood(passenger._id)}
                 >
                   {passenger.selected ? 'Selected' : 'Select Food'}

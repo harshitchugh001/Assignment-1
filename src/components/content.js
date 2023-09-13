@@ -206,8 +206,8 @@ export default function Content() {
     ]
   };
   const [selectedLabel, setSelectedLabel] = useState(null);
-  const [checkoutData, setCheckoutData] = useState(null);
   const [passengerId, setpassengerId] = useState(null);
+  const [updatedfood,setupdatedfood]=useState(null);
 
   const handleSelect = (labelId) => {
     setSelectedLabel(labelId);
@@ -216,9 +216,6 @@ export default function Content() {
   const filteredMeals = mealsData.meals.filter((meal) =>
     meal.labels.includes(selectedLabel)
   );
-  const handleCheckout = (meal, price) => {
-    setCheckoutData({ meal, price });
-  };
   const handlePassengerId = (passengerId) => {
     setpassengerId({ passengerId });
   };
@@ -235,11 +232,11 @@ export default function Content() {
         </div>
         <div className="mt-4 ml-4">
           <p>Selected Label: {selectedLabel}</p>
-          <Meallayout meals={filteredMeals} onCheckout={handleCheckout} selectedpassengerId={passengerId} />
+          <Meallayout meals={filteredMeals} selectedpassengerId={passengerId} updatefood={setupdatedfood} />
         </div>
       </div>
       <aside className='col-span-12 md:col-span-4  p-4 md:mt-4 md:mr-7'>
-        <Passenger checkoutData={checkoutData} onPassengerId={handlePassengerId} />
+        <Passenger  passengerfood={updatedfood} onPassengerId={handlePassengerId} />
       </aside>
       <div>
       </div>

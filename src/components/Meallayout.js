@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Meallayout({ meals, selectedpassengerId }) {
+export default function Meallayout({ meals, selectedpassengerId,updatefood }) {
   const [selectedMeal, setSelectedMeal] = useState(null);
   const [selectedDrinks, setSelectedDrinks] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);
@@ -48,14 +48,13 @@ export default function Meallayout({ meals, selectedpassengerId }) {
       alert('Please select a meal before checking out.');
       return;
     }
-  
     const checkoutData = {
       passengerId: selectedpassengerId.passengerId, 
       meal: selectedMeal.title, 
       drink: selectedDrinks[selectedMeal.id].map((drink) => drink.title)[0], 
       totalPrice: totalPrice,
     };
-    console.log(checkoutData);
+    updatefood(selectedpassengerId.passengerId);
   
     fetch(`${process.env.REACT_APP_API}/updatefood`, {
       method: 'post',
@@ -71,6 +70,7 @@ export default function Meallayout({ meals, selectedpassengerId }) {
       .catch((error) => {
         console.error('Error during checkout:', error);
       });
+      alert('meal is selected');
   };
   
   return (
@@ -134,6 +134,7 @@ export default function Meallayout({ meals, selectedpassengerId }) {
         <button
           className="bg-blue-700 text-white px-4 py-2 rounded-md"
           onClick={handleCheckout}
+
         >
           Checkout
         </button>
